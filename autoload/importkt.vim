@@ -2,7 +2,7 @@ let s:importCacheLocation = $HOME . '/.import.lib'
 let s:inspectCacheLocation = $HOME . '/.import.src'
 
 fu! s:addLineToBuffer(line)
-  if !search(a:line)
+  if !search(a:line, 'np')
     call appendbufline(bufnr(), 2, a:line)
   end
 endfu
